@@ -59,10 +59,3 @@ select.addEventListener('change', ({ target: { value } }) => {
         stubText()
     }
 })
-
-
-//!!!!!!!!!!!!!!!!!!!!!!!
-
-if (!listContainer.lastChild) {
-    stubText()
-}
