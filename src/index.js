@@ -1,6 +1,7 @@
 import list from './list.json'
 
 const select = document.getElementById('select')
+document.getElementById('select').selectedIndex = 0  /* bugfix for firefox */
 const listContainer = document.getElementById('list-container')
 
 const alphabet = [
