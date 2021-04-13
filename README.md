@@ -1,3 +1,8 @@
 # How to start a project
 
-## Available Scripts
+## Install npm packages
+npm install
+
+
+## Run the project
+npm run start
