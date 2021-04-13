@@ -1,8 +1,8 @@
-# How to start a project
+## How to start a project
 
-## Install npm packages
+### Install npm packages
 npm install
 
 
-## Run the project
+### Run the project
 npm run start
