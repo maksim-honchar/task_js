@@ -1,29 +1,24 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
-    mode: 'development',
-    entry: './src/index.js',
-    devtool: 'inline-source-map',
+    entry: path.resolve(__dirname, './src/index.js'),
     module: {
         rules: [
             {
-                test: /\.m?js$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
-            },
-        ],
+                test: /\.(js)$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+            }
+        ]
     },
-    devServer: {
-        contentBase: './dist'
+    resolve: {
+        extensions: ['*', '.js']
     },
     output: {
+        path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        clean: true
-    }
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname, './dist'),
+    },
 }
