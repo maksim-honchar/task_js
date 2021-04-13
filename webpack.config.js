@@ -19,8 +19,7 @@ module.exports = {
         ],
     },
     devServer: {
-        // contentBase: './dist'
-        contentBase: './public'
+        contentBase: './dist'
     },
     output: {
         filename: 'bundle.js',
