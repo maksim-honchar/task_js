@@ -38,6 +38,7 @@ const clearList = listContainer => {
 
 const stubText = () => {
     const para = document.createElement('p')
+    para.className = 'stub-text'
     para.innerText = 'No matches found'
     document.getElementById('list-container').appendChild(para)
 }
@@ -49,6 +50,7 @@ select.addEventListener('change', ({ target: { value } }) => {
         .filter(({ name }) => name.substring(0, 1).toLowerCase() === value.toLowerCase())
         .forEach(({ name }) => {
             const para = document.createElement('p')
+            para.className = 'plain-text'
             para.innerText = name
             document.getElementById('list-container').appendChild(para)
         })
@@ -58,3 +60,9 @@ select.addEventListener('change', ({ target: { value } }) => {
     }
 })
 
+
+//!!!!!!!!!!!!!!!!!!!!!!!
+
+if (!listContainer.lastChild) {
+    stubText()
+}
